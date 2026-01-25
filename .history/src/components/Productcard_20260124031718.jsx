@@ -2,7 +2,8 @@ import "./ProductCard.css";
 
 function ProductCard() {
   return (
-    <div className="card-container">
+    <>
+      <h1 style={{ marginBottom: "20px" }}>Product details</h1>
       <div className="card">
         {/* left- pictures */}
         <div>
@@ -14,7 +15,7 @@ function ProductCard() {
           <p>right</p>
         </div>
       </div>
-    </div>
+    </>
   );
 }
 

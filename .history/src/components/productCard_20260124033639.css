@@ -11,5 +11,5 @@
   border-radius: 6px;
   width: 300px;
   display: flex;
-  justify-content: space-around;
+  flex-direction: column;
 }
