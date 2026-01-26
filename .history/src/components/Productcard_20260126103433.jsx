@@ -5,11 +5,7 @@ function ProductCard(props) {
     <div className="card-container">
       <div className="card">
         <div className="card-image">
-          <img
-            src={props.image}
-            alt={props.name}
-            style={{ width: "100%", height: "100%", objectFit: "cover" }}
-          />
+          <img src={props.image} alt={props.name} />
         </div>
 
         <div className="card-content">

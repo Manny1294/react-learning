@@ -1,6 +1,6 @@
 import "./App.css";
 import ProductCard from "./components/ProductCard";
-import PerfumeImg from "./assets/perfume.jpg";
+import PerfumeImg from "./assets/PerfumeImg";
 
 export default function App() {
   const Product = {

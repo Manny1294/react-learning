@@ -1,12 +1,12 @@
 import "./App.css";
 import ProductCard from "./components/ProductCard";
-import PerfumeImg from "./assets/perfume.jpg";
+import PerfumeImg from "./assets/PerfumeImg";
 
 export default function App() {
   const Product = {
     name: "beans",
     price: "200",
-    image: PerfumeImg,
+    image: "",
     description: "Nigerian-made long grain rice",
   };
   const Product2 = {

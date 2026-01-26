@@ -1,18 +1,18 @@
 import "./App.css";
 import ProductCard from "./components/ProductCard";
-import PerfumeImg from "./assets/perfume.jpg";
+import PerfumeImg from "./assets/PerfumeImg"
 
 export default function App() {
   const Product = {
     name: "beans",
     price: "200",
-    image: PerfumeImg,
+    image: "",
     description: "Nigerian-made long grain rice",
   };
   const Product2 = {
     name: "orange",
     price: "700",
-    image: PerfumeImg,
+    image: PerfumeImg
     description: "home made orange",
   };
   return (
@@ -24,12 +24,12 @@ export default function App() {
         image={Product.image}
         description={Product.description}
       />
-      <ProductCard
+      {/* <ProductCard
         name={Product2.name}
         price={Product2.price}
         image={Product2.image}
         description={Product2.description}
-      />
+      /> */}
     </div>
   );
 }
