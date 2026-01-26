@@ -1,6 +1,13 @@
 import "./ProductCard.css";
 
-function ProductCard(props) {
+const Product = {
+  name: "Rice",
+  price: "100",
+  image: "",
+  description: "Nigerian made rice",
+};
+
+function ProductCard() {
   return (
     <div className="card-container">
       <div className="card">
@@ -12,10 +19,8 @@ function ProductCard(props) {
         {/* right */}
         <div>
           <p>right</p>
-          <p>{props.name}</p>
-          <p>{props.price}</p>
-          <p>{props.image}</p>
-          <p>{props.description}</p>
+          <p>{Product.name}</p>
+          <p>{Product.price}</p>
         </div>
       </div>
     </div>

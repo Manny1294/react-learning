@@ -1,6 +1,6 @@
 import "./ProductCard.css";
 
-function ProductCard(props) {
+function ProductCard() {
   return (
     <div className="card-container">
       <div className="card">
@@ -12,10 +12,6 @@ function ProductCard(props) {
         {/* right */}
         <div>
           <p>right</p>
-          <p>{props.name}</p>
-          <p>{props.price}</p>
-          <p>{props.image}</p>
-          <p>{props.description}</p>
         </div>
       </div>
     </div>

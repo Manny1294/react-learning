@@ -3,7 +3,7 @@ import ProductCard from "./components/ProductCard";
 
 export default function App() {
   const Product = {
-    name: "beans",
+    name: "rice",
     price: "200",
     image: "",
     description: "Nigerian-made long grain rice",

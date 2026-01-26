@@ -13,9 +13,6 @@ function ProductCard(props) {
         <div>
           <p>right</p>
           <p>{props.name}</p>
-          <p>{props.price}</p>
-          <p>{props.image}</p>
-          <p>{props.description}</p>
         </div>
       </div>
     </div>
