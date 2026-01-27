@@ -6,7 +6,6 @@ export default function Todos() {
 
   function addTodos() {
     setTodos([...todos, input]);
-    setInput("");
   }
   return (
     <>
@@ -20,7 +19,7 @@ export default function Todos() {
           }}
         ></input>
 
-        <button onClick={addTodos}>Add</button>
+        <button>Add</button>
         <p>{todos}</p>
       </div>
     </>

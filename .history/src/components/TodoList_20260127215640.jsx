@@ -4,10 +4,6 @@ export default function Todos() {
   const [todos, setTodos] = useState([]);
   const [input, setInput] = useState("");
 
-  function addTodos() {
-    setTodos([...todos, input]);
-    setInput("");
-  }
   return (
     <>
       <div>
@@ -15,12 +11,12 @@ export default function Todos() {
           type="text"
           value={input}
           onChange={(event) => {
-            console.log("Typing:", event.target.value);
+            console.log(event.target.value);
             setInput(event.target.value);
           }}
         ></input>
 
-        <button onClick={addTodos}>Add</button>
+        <button>Add</button>
         <p>{todos}</p>
       </div>
     </>

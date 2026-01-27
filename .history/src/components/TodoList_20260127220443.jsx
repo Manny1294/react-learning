@@ -4,9 +4,8 @@ export default function Todos() {
   const [todos, setTodos] = useState([]);
   const [input, setInput] = useState("");
 
-  function addTodos() {
-    setTodos([...todos, input]);
-    setInput("");
+  const addTodo = () = {
+    setTodos([...todos, input])
   }
   return (
     <>
@@ -20,7 +19,7 @@ export default function Todos() {
           }}
         ></input>
 
-        <button onClick={addTodos}>Add</button>
+        <button>Add</button>
         <p>{todos}</p>
       </div>
     </>
