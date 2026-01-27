@@ -2,8 +2,6 @@ import "./App.css";
 import ProductCard from "./components/ProductCard";
 import NavBar from "./components/NavBar";
 import PerfumeImg from "./assets/perfume.jpg";
-import Counter from "./components/Counter";
-import Todos from "./components/TodoList";
 
 export default function App() {
   const Product = {
@@ -20,7 +18,6 @@ export default function App() {
   };
   return (
     <div>
-      <NavBar />
       <h1 style={{ marginBottom: "20px" }}>Product details</h1>
       <ProductCard
         name={Product.name}
@@ -34,8 +31,6 @@ export default function App() {
         image={Product2.image}
         description={Product2.description}
       />
-      <Counter />
-      <Todos />
     </div>
   );
 }

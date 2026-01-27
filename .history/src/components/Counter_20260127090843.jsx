@@ -1,0 +1,1 @@
+export defaultfunction Food() {}
