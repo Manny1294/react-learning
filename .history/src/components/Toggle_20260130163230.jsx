@@ -10,7 +10,7 @@ export default function Toggle() {
   return (
     <>
       <div>
-        <button onClick={toggleDark}>Click</button>
+        <button>Click</button>
         <div
           style={{
             backgroundColor: isdark ? "black" : "red",
