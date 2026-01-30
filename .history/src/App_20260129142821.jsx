@@ -37,7 +37,6 @@ export default function App() {
       />
       <Counter />
       <Todos />
-      <Toggle />
     </div>
   );
 }

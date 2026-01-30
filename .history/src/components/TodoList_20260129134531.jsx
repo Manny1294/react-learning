@@ -23,13 +23,7 @@ export default function Todos() {
         ></input>
 
         <button onClick={addTodos}>Add</button>
-
-        {/* conditional rendering */}
-        <ol>
-          {todos.map((todo, index) => (
-            <li key={index}>{todo}</li>
-          ))}
-        </ol>
+        <p>{todos}</p>
       </div>
     </>
   );

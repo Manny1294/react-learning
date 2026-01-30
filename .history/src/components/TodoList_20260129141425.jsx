@@ -26,8 +26,8 @@ export default function Todos() {
 
         {/* conditional rendering */}
         <ol>
-          {todos.map((todo, index) => (
-            <li key={index}>{todo}</li>
+          {todos.map((todo) => (
+            <li key={todo}>{todo}</li>
           ))}
         </ol>
       </div>

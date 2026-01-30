@@ -5,6 +5,10 @@ export default function Todos() {
   // to track changes when typing in the input textbox
   const [input, setInput] = useState("");
 
+  // const todoList = todos.map((todo) => {
+  //   todo;
+  // });
+
   // to add todo item to the todos array and clear the input to an empty string afterwards
   function addTodos() {
     setTodos([...todos, input]);
@@ -23,11 +27,10 @@ export default function Todos() {
         ></input>
 
         <button onClick={addTodos}>Add</button>
-
-        {/* conditional rendering */}
         <ol>
-          {todos.map((todo, index) => (
-            <li key={index}>{todo}</li>
+          {todos.map((todos) => (
+            <li>{todos}</li>
+            key={todos}
           ))}
         </ol>
       </div>
