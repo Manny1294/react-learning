@@ -28,7 +28,6 @@ export default function Todos() {
     );
   }
 
-  // logic to filter the todos based on their status
   let filteredTodos;
   if (filter === "all") {
     filteredTodos = todos;

@@ -18,7 +18,7 @@ export default function Todos() {
     setTodos(todos.filter((_, i) => i !== index));
   }
 
-  // to strike through a completed todo item using the index as identifier
+  //
   function toggleComplete(index) {
     setTodos(
       todos.map((todo, i) =>
@@ -26,16 +26,6 @@ export default function Todos() {
         i === index ? { ...todo, completed: !todo.completed } : todo,
       ),
     );
-  }
-
-  // logic to filter the todos based on their status
-  let filteredTodos;
-  if (filter === "all") {
-    filteredTodos = todos;
-  } else if (filter === "complete") {
-    filteredTodos = todos.filter((todo) => todo.completed === true);
-  } else if (filter === "incomplete") {
-    filteredTodos = todos.filter((todo) => todo.completed === false);
   }
 
   return (
@@ -60,14 +50,13 @@ export default function Todos() {
             margin: "5px",
           }}
         >
-          {/* buttons to filter the different starus of todo. items */}
           <button onClick={() => setFilter("all")}>All</button>
-          <button onClick={() => setFilter("incomplete")}>Incomplete</button>
-          <button onClick={() => setFilter("complete")}>Complete</button>
+          <button>Incomplete</button>
+          <button>Complete</button>
         </div>
 
         {/* conditional rendering */}
-        {filteredTodos.map((todo, index) => (
+        {todos.map((todo, index) => (
           <li
             key={index}
             onClick={() => toggleComplete(index)}

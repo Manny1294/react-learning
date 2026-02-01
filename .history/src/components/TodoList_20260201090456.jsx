@@ -28,7 +28,6 @@ export default function Todos() {
     );
   }
 
-  // logic to filter the todos based on their status
   let filteredTodos;
   if (filter === "all") {
     filteredTodos = todos;
@@ -60,14 +59,13 @@ export default function Todos() {
             margin: "5px",
           }}
         >
-          {/* buttons to filter the different starus of todo. items */}
           <button onClick={() => setFilter("all")}>All</button>
           <button onClick={() => setFilter("incomplete")}>Incomplete</button>
           <button onClick={() => setFilter("complete")}>Complete</button>
         </div>
 
         {/* conditional rendering */}
-        {filteredTodos.map((todo, index) => (
+        {todos.map((filteredTodos, index) => (
           <li
             key={index}
             onClick={() => toggleComplete(index)}
