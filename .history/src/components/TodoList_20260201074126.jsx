@@ -10,11 +10,6 @@ export default function Todos() {
     setTodos([...todos, input]);
     setInput("");
   }
-
-  function deleteTodo(index) {
-    setTodos(todos.filter((_, i) => i !== index));
-  }
-
   return (
     <>
       <div>
