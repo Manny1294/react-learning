@@ -97,7 +97,6 @@ export default function ContactList() {
                 <p style={{ margin: "4px 0", fontWeight: "600" }}>
                   {contact.name}
                 </p>
-
                 <p style={{ margin: "4px 0", color: "#666", fontSize: "14px" }}>
                   {contact.email}
                 </p>
@@ -106,7 +105,6 @@ export default function ContactList() {
                   {contact.phone}
                 </p>
               </div>
-
               <button
                 onClick={() =>
                   setContacts(contacts.filter((_, i) => i !== index))
