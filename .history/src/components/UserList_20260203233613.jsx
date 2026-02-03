@@ -8,10 +8,10 @@ export default function UserList() {
   //fetch user when component first loads
 
   useEffect(() => {
-    axios.get("https://jsonplaceholder.typicode.com/users").then((res) => {
-      setUsers(res.data);
-      setLoading(false);
-    });
+    axios
+      .get("https://jsonplaceholder.typicode.com/users")
+      .then((res) => setUsers(res.data));
+    setLoading = false;
   }, []);
 
   if (loading) return <p>loading ...</p>;

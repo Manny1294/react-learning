@@ -3,18 +3,15 @@ import axios from "axios";
 
 export default function UserList() {
   const [users, setUsers] = useState([]);
-  const [loading, setLoading] = useState(true);
 
   //fetch user when component first loads
 
   useEffect(() => {
-    axios.get("https://jsonplaceholder.typicode.com/users").then((res) => {
-      setUsers(res.data);
-      setLoading(false);
-    });
+    axios
+      .get("https://jsonplaceholder.typicode.com/users")
+      .then((res) => setUsers(res.data));
   }, []);
 
-  if (loading) return <p>loading ...</p>;
   return (
     <>
       <div>
@@ -32,7 +29,7 @@ export default function UserList() {
                 alignItems: "center",
               }}
             >
-              {`${user.name} - ${user.address.city}`}
+              {`{user.name} - {user.address.city}`}
             </li>
           ))}
         </ul>
