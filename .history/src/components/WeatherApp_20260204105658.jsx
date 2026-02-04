@@ -2,33 +2,26 @@ import { useState } from "react";
 import axios from "axios";
 
 export default function WeatherApp() {
-  //  state for weather, city, loading
   const [weather, setWeather] = useState(null); // an object -null until i fetch
   const [city, setCity] = useState(""); // a string
-  const [loading, setLoading] = useState(false);
+  const [loading, setLoading] = useState(true);
 
   function fetchWeather() {
     setLoading(true);
     axios
       .get(
-        `https://api.openweathermap.org/data/2.5/weather?q=${city}&APPID=8c99ea5adb81765db0a5e24e8cdedc69`,
+        "https://api.openweathermap.org/data/2.5/weather?q={{city}}&APPID=8c99ea5adb81765db0a5e24e8cdedc69",
       )
       .then((res) => {
         setWeather(res.data);
-        setLoading(false);
+        loading(false);
       });
   }
-
   return (
     <>
       <input
         type="text"
-        value={city}
         placeholder="city"
-        onChange={(event) => {
-          console.log("Typing:", event.target.value);
-          setCity(event.target.value);
-        }}
         style={{
           padding: "10px",
           borderRadius: "6px",
@@ -48,20 +41,8 @@ export default function WeatherApp() {
           fontWeight: "600",
         }}
       >
-        Search
+        Searchx
       </button>
-      <>
-        If loading is true → show <p>Loading...</p>- If loading is false → show
-        nothing
-        {loading && <p>Loading...</p>}
-        {weather && (
-          <div>
-            <p>City: {weather.name}</p>
-            <p>Temp: {weather.main.temp}°C</p>
-            <p>Description: {weather.weather[0].id}</p>
-          </div>
-        )}
-      </>
     </>
   );
 }

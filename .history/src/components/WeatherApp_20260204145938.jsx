@@ -18,7 +18,6 @@ export default function WeatherApp() {
         setLoading(false);
       });
   }
-
   return (
     <>
       <input
@@ -51,16 +50,8 @@ export default function WeatherApp() {
         Search
       </button>
       <>
-        If loading is true → show <p>Loading...</p>- If loading is false → show
-        nothing
-        {loading && <p>Loading...</p>}
-        {weather && (
-          <div>
-            <p>City: {weather.name}</p>
-            <p>Temp: {weather.main.temp}°C</p>
-            <p>Description: {weather.weather[0].id}</p>
-          </div>
-        )}
+        <p>{weather}</p>
+        <p>{city}</p>
       </>
     </>
   );

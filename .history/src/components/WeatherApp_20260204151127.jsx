@@ -51,8 +51,6 @@ export default function WeatherApp() {
         Search
       </button>
       <>
-        If loading is true → show <p>Loading...</p>- If loading is false → show
-        nothing
         {loading && <p>Loading...</p>}
         {weather && (
           <div>

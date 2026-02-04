@@ -42,7 +42,7 @@ export default function App() {
       <Todos />
       {/* <Toggle /> */}
       <ContactList />
-      {/* <UserList /> */}
+      <UserList />
       <WeatherApp />
     </div>
   );
