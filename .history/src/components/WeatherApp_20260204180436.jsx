@@ -8,18 +8,11 @@ export default function WeatherApp() {
   const [loading, setLoading] = useState(false);
 
   function fetchWeather() {
-    const url = `${import.meta.env.VITE_WEATHER_BASE_URL}?q=${city}&appid=${import.meta.env.VITE_WEATHER_API_KEY}`;
-    console.log("Fetching URL:", url);
-
     setLoading(true);
-    axios
-      .get(url)
-
-      .then((res) => {
-        console.log("API Response:", res.data);
-        setWeather(res.data);
-        setLoading(false);
-      });
+    axios.get(import.meta.env.VITE_WEATHER_URL).then((res) => {
+      setWeather(res.data);
+      setLoading(false);
+    });
   }
 
   return (

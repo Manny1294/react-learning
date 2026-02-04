@@ -13,8 +13,9 @@ export default function WeatherApp() {
 
     setLoading(true);
     axios
-      .get(url)
-
+      .get(
+        `${import.meta.env.VITE_WEATHER_BASE_URL}?q=${city}&appid=${import.meta.env.VITE_WEATHER_API_KEY}`,
+      )
       .then((res) => {
         console.log("API Response:", res.data);
         setWeather(res.data);
